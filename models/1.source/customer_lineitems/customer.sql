@@ -1,6 +1,6 @@
 WITH
-    base_customers AS (SELECT * FROM {{ source('sf_customers', 'customers') }}),
+    base_customers AS (SELECT * FROM {{ source('sf_customers', 'customer') }})
 
     SELECT 
         *
-    FROM customers
+    FROM base_customers
